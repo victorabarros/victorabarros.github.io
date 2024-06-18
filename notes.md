@@ -10,3 +10,8 @@
   - linode
   - digitalocean
 - use website.victorbarros.dev victoralmeidabarros.com as domains
+- tab to linkedin
+
+## pocs
+
+- use react-native-web to create the page
