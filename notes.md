@@ -2,7 +2,7 @@
 
 ## todo
 
-- add /sextou.html page
+- create ligitning wallet
 - deploy html page
   - https://railway.app/template/o3MbZe
   - https://www.000webhost.com/
