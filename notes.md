@@ -9,6 +9,7 @@
   - hostinger
   - linode
   - digitalocean
+  - https://www.reddit.com/r/nginx/comments/upsizm/free_hosting_for_nginx_on_unfurlcloud/
 - use website.victorbarros.dev victoralmeidabarros.com as domains
 - tab to linkedin
 
