@@ -15,4 +15,4 @@
 
 ## pocs
 
-- use react-native-web to create the page
+- use react-native-web to create the page https://necolas.github.io/react-native-web/
