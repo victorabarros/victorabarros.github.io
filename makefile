@@ -2,7 +2,7 @@ APP_NAME:=$(shell pwd | xargs basename)
 APP_DIR=/usr/share/nginx/html
 PWD=$(shell pwd)
 EXPOSE_PORT=8085
-BASE_DOCKER_IMAGE=nginx:1.27-alpine
+BASE_DOCKER_IMAGE=nginx:alpine
 APP_DOCKER_IMAGE=${APP_NAME}:latest
 
 YELLOW=$(shell printf '\033[0;1;33m')
