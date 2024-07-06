@@ -2,6 +2,8 @@
 
 ## todo
 
+- add https://github.com/adilmoujahid/blockchain-python-tutorial/pull/15 contribution when pr approved and merged
+- add https://github.com/nostr-dev-kit/ndk/pull/237 contribution when pr approved and merged
 - create ligitning wallet
 - deploy html page
   - https://railway.app/template/o3MbZe
