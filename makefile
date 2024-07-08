@@ -17,12 +17,7 @@ run: remove-containers
 	@echo "${YELLOW}running at http://localhost/${COLOR_OFF}"
 
 debug: remove-containers
-	@docker run \
-		-v ${PWD}:${APP_DIR}:ro \
-		-p ${EXPOSE_PORT}:80 \
-		--name ${APP_NAME}-debug \
-		-d \
-		${BASE_DOCKER_IMAGE}
+	@docker run -v ${PWD}:${APP_DIR}:ro -p ${EXPOSE_PORT}:80 --name ${APP_NAME}-debug -d ${BASE_DOCKER_IMAGE}
 	@echo "${YELLOW}running at http://localhost:${EXPOSE_PORT}/${COLOR_OFF}"
 
 remove-containers:
