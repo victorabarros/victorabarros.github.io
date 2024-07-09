@@ -14,7 +14,7 @@ build-image:
 
 run: remove-containers
 	@docker run --rm -p ${EXPOSE_PORT}:80 --name ${APP_NAME} -d ${APP_DOCKER_IMAGE}
-	@echo "${YELLOW}running at http://localhost:8085/${COLOR_OFF}"
+	@echo "${YELLOW}running at http://localhost:${EXPOSE_PORT}/${COLOR_OFF}"
 
 debug: remove-containers
 	@docker run \
@@ -23,7 +23,7 @@ debug: remove-containers
 		--name ${APP_NAME}-debug \
 		-d \
 		${BASE_DOCKER_IMAGE}
-	@echo "${YELLOW}running at http://localhost:8085/${COLOR_OFF}"
+	@echo "${YELLOW}running at http://localhost:${EXPOSE_PORT}/${COLOR_OFF}"
 
 remove-containers:
 ifneq ($(shell docker ps -a --filter "name=${APP_NAME}" -aq 2> /dev/null | wc -l | bc), 0)

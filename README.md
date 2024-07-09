@@ -10,3 +10,7 @@ make debug
 make build-image
 make run
 ```
+
+## Deploy
+
+railway https://victorabarrosgithubio-production.up.railway.app/
