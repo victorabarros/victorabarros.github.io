@@ -13,11 +13,11 @@ build-image:
 	@echo "${YELLOW}building docker image ${APP_DOCKER_IMAGE}${COLOR_OFF}"
 	@docker build --rm . -t ${APP_DOCKER_IMAGE}
 
-run: remove-containers
+run: kill-containers
 	@docker run --rm -p ${EXPOSE_PORT}:80 --name ${APP_NAME} -d ${APP_DOCKER_IMAGE}
 	@echo "${YELLOW}running at http://localhost:${EXPOSE_PORT}/${COLOR_OFF}"
 
-debug: remove-containers
+debug: kill-containers
 	@docker run -v ${PWD}:${APP_DIR}:ro -p ${EXPOSE_PORT}:80 --name ${APP_NAME}-debug -d ${BASE_DOCKER_IMAGE}
 	@echo "${YELLOW}running at http://localhost:${EXPOSE_PORT}/${COLOR_OFF}"
 
@@ -31,7 +31,7 @@ tag-amd64-image:
 push-image: build-amd64-image tag-amd64-image
 	@docker push ${GCP_ARTIFACT_REGISTRY}/${APP_DOCKER_IMAGE}:${TAG}
 
-remove-containers:
+kill-containers:
 ifneq ($(shell docker ps -a --filter "name=${APP_NAME}" -aq 2> /dev/null | wc -l | bc), 0)
 	@echo "${YELLOW}Removing containers${COLOR_OFF}"
 	@docker ps -a --filter "name=${APP_NAME}" -aq | xargs docker rm -f
