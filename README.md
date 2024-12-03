@@ -13,13 +13,6 @@ make build-image
 make run
 ```
 
-## Deploy
-
-<!-- ### railway
-
-https://victorabarrosgithubio-production.up.railway.app/
-
--->
 ### GCP
 
 #### How push image to GCP Artifacts Registry
