@@ -17,7 +17,7 @@ make run
 
 #### How push image to GCP Artifacts Registry
 
-Define the tag you'll use. In the example below is **0.0.1**.
+Define the tag you'll use. In the example below is **0.0.2**.
 This will push your image to the Artifacts Registry.
 
 ```sh
